@@ -1,5 +1,9 @@
 import 'dart:convert';
-
+class ProfileMark {
+  final String name;
+  final DateTime start = DateTime.now();
+  ProfileMark.unnamed() : name = '';
+}
 class User {
     String login;
     String avatarUrl;

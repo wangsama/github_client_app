@@ -1,7 +1,3 @@
-// To parse this JSON data, do
-//
-//     final welcome = welcomeFromJson(jsonString);
-
 import 'dart:convert';
 
 class CacheConfig {
@@ -10,9 +6,9 @@ class CacheConfig {
     int maxCount;
 
     CacheConfig({
-        required this.enable,
-        required this.maxAge,
-        required this.maxCount,
+      this.enable = true,
+      this.maxAge = 60,
+      this.maxCount = 100,
     });
 
     factory CacheConfig.fromRawJson(String str) => CacheConfig.fromJson(json.decode(str));
